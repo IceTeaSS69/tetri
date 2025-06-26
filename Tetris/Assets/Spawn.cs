@@ -12,6 +12,10 @@ public class Spawn : MonoBehaviour
         {
             gameObject.transform.position = gameObject.transform.position - new Vector3(0.01f, 0, 0);
         }
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            
+            transform.Rotate(0, 0, 90);
+        }
     }
 }

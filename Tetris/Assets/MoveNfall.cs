@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class MoveNfall : MonoBehaviour
 {
-    public GameObject[] blocks;    // Префаб блока
-    public float fallSpeed = 3; // Скорость падения
+    public GameObject[] blocks;
+    public float fallSpeed = 3; 
 
     void Update()
     {
