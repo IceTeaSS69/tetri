@@ -54,17 +54,7 @@ public class MoveNfall : MonoBehaviour
             blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collider)
-    {
-        if (collider.gameObject.CompareTag("Plate"))
-        {
-            current = (current + 1) % blocks.Length;
-            blockInt++;
-            blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
-        }
-    }
-
-    void SpawnRandomBlock()
+         void SpawnRandomBlock()
     {
         //if (Input.GetKeyDown(KeyCode.Space))
         //{
@@ -72,11 +62,11 @@ public class MoveNfall : MonoBehaviour
         //    int randomIndex = Random.Range(0, blocks.Length);
         //GameObject randomBlock = blocks[randomIndex];
 
-        //// Создаем блок и настраиваем физику
+        //// РЎРѕР·РґР°РµРј Р±Р»РѕРє Рё РЅР°СЃС‚СЂР°РёРІР°РµРј С„РёР·РёРєСѓ
         //GameObject newBlock = Instantiate(randomBlock, transform.position, Quaternion.identity);
         //newBlock.GetComponent<Rigidbody2D>().gravityScale = fallSpeed;
         //}
-        // Выбираем случайный блок из массива
+        // Р’С‹Р±РёСЂР°РµРј СЃР»СѓС‡Р°Р№РЅС‹Р№ Р±Р»РѕРє РёР· РјР°СЃСЃРёРІР°
         
         
     }

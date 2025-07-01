@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 773
+    y: 718
     width: 1463
     height: 221
   m_SerializedDataModeController:
@@ -495,7 +495,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 42b30000
     m_LastClickedID: 45890
-    m_ExpandedIDs: 0000000042b3000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000042b30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -603,8 +603,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1464
-    y: 79
+    x: 1465
+    y: 24
     width: 455
     height: 915
   m_SerializedDataModeController:
@@ -653,7 +653,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79
+    y: 24
     width: 362
     height: 668
   m_SerializedDataModeController:
@@ -670,8 +670,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 22b2000030b2000012b200003ab20000
-      m_LastClickedID: 45626
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: 00fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -1250,7 +1250,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: 0.058776636, y: -0.003320938, z: 0.00013664982, w: 0.99827784}
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
     m_SceneView: {fileID: 18}
@@ -1323,8 +1323,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Game\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 363
-    y: 79
+    x: 364
+    y: 24
     width: 1099
     height: 668
   m_SerializedDataModeController:
@@ -1384,8 +1384,8 @@ MonoBehaviour:
       y: 21
       width: 1099
       height: 647
-    m_Scale: {x: 1.1793854, y: 1.1793854}
-    m_Translation: {x: 510.13806, y: 282.56992}
+    m_Scale: {x: 1.1793854, y: 1.1793855}
+    m_Translation: {x: 510.13806, y: 282.56995}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -1395,7 +1395,7 @@ MonoBehaviour:
       x: -432.5457
       y: -239.59082
       width: 931.84125
-      height: 548.5908
+      height: 548.59076
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1099, y: 668}
