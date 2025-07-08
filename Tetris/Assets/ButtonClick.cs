@@ -24,6 +24,7 @@ public class ButtonClick : MonoBehaviour
                     
 
                     SceneManager.LoadScene("Scene1");
+        Time.timeScale = 1f;
                 
     }
 }

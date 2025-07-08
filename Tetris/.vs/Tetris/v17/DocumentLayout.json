@@ -3,7 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\IceTea\\Desktop\\Tet\\Tetris\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D2BFFF02-D087-DB1A-C7FE-6538A965A290}|Assembly-CSharp.csproj|C:\\Users\\IceTea\\Desktop\\Tet\\Tetris\\assets\\spawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D2BFFF02-D087-DB1A-C7FE-6538A965A290}|Assembly-CSharp.csproj|C:\\Users\\IceTea\\Desktop\\Tet\\Tetris\\assets\\buttonclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2BFFF02-D087-DB1A-C7FE-6538A965A290}|Assembly-CSharp.csproj|solutionrelative:assets\\buttonclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2BFFF02-D087-DB1A-C7FE-6538A965A290}|Assembly-CSharp.csproj|c:\\users\\icetea\\desktop\\tet\\tetris\\assets\\spawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2BFFF02-D087-DB1A-C7FE-6538A965A290}|Assembly-CSharp.csproj|solutionrelative:assets\\spawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D2BFFF02-D087-DB1A-C7FE-6538A965A290}|Assembly-CSharp.csproj|C:\\Users\\IceTea\\Desktop\\Tet\\Tetris\\assets\\gomenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D2BFFF02-D087-DB1A-C7FE-6538A965A290}|Assembly-CSharp.csproj|solutionrelative:assets\\gomenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D2BFFF02-D087-DB1A-C7FE-6538A965A290}|Assembly-CSharp.csproj|c:\\users\\icetea\\desktop\\tet\\tetris\\assets\\buttonclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D2BFFF02-D087-DB1A-C7FE-6538A965A290}|Assembly-CSharp.csproj|solutionrelative:assets\\buttonclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "ButtonClick.cs",
               "DocumentMoniker": "C:\\Users\\IceTea\\Desktop\\Tet\\Tetris\\Assets\\ButtonClick.cs",
               "RelativeDocumentMoniker": "Assets\\ButtonClick.cs",
               "ToolTip": "C:\\Users\\IceTea\\Desktop\\Tet\\Tetris\\Assets\\ButtonClick.cs",
               "RelativeToolTip": "Assets\\ButtonClick.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T18:14:39.319Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "GOmenu.cs",
               "DocumentMoniker": "C:\\Users\\IceTea\\Desktop\\Tet\\Tetris\\Assets\\GOmenu.cs",
               "RelativeDocumentMoniker": "Assets\\GOmenu.cs",
@@ -55,12 +55,11 @@
               "RelativeToolTip": "Assets\\GOmenu.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T17:38:40.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-01T17:38:40.17Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "DestroySc.cs",
               "DocumentMoniker": "C:\\Users\\IceTea\\Desktop\\Tet\\Tetris\\Assets\\DestroySc.cs",
               "RelativeDocumentMoniker": "Assets\\DestroySc.cs",
@@ -68,12 +67,11 @@
               "RelativeToolTip": "Assets\\DestroySc.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAgwBUAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T17:21:35.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-01T17:21:35.113Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MoveNfall.cs",
               "DocumentMoniker": "C:\\Users\\IceTea\\Desktop\\Tet\\Tetris\\Assets\\MoveNfall.cs",
               "RelativeDocumentMoniker": "Assets\\MoveNfall.cs",
@@ -81,12 +79,11 @@
               "RelativeToolTip": "Assets\\MoveNfall.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAowEkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T18:39:26.308Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-24T18:39:26.308Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Spawn.cs",
               "DocumentMoniker": "C:\\Users\\IceTea\\Desktop\\Tet\\Tetris\\Assets\\Spawn.cs",
               "RelativeDocumentMoniker": "Assets\\Spawn.cs",
