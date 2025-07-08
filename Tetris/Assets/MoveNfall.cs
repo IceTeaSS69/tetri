@@ -98,22 +98,5 @@ public class MoveNfall : MonoBehaviour
             blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
         }
     }
-         void SpawnRandomBlock()
-    {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    current = (current + 1) % blocks.Length;
-        //    int randomIndex = Random.Range(0, blocks.Length);
-        //GameObject randomBlock = blocks[randomIndex];
-
-        //// Создаем блок и настраиваем физику
-        //GameObject newBlock = Instantiate(randomBlock, transform.position, Quaternion.identity);
-        //newBlock.GetComponent<Rigidbody2D>().gravityScale = fallSpeed;
-        //}
-        // Выбираем случайный блок из массива
-        
-        
-    }
-
-
+      
 }
