@@ -4,12 +4,14 @@ using UnityEngine.UI;
 
 public class MoveNfall : MonoBehaviour
 {
+    
     public int current = 0;
     public Text score;
+    public Text Record;
     public GameObject[] blocks;
     public float fallSpeed = 3;
     public Vector3 SpaPosition;
-    int maxBl = 10;
+    public int maxBl = 10;
     int blockInt = 0;
     private void Start()
     {
@@ -17,30 +19,72 @@ public class MoveNfall : MonoBehaviour
         blockInt++;
         blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
     }
+
+
     public void Update()
     {
+
+
         score.text = $"{blockInt}";
+
+        if (Time.timeScale == 0f)
+        {
+            Destroy(score);
+            Record.text = $"Your RECORD = {blockInt}";
+        }
         if (blockInt > maxBl)
         {
             Destroy(gameObject);
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            current = (current + 1) % blocks.Length;
-            blockInt++;
-            blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);                    
+            if (Time.timeScale == 1f)
+            {
+                current = (current + 1) % blocks.Length;
+                blockInt++;
+                blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
+            }
+            if (Time.timeScale == 0f)
+            {
+                Debug.Log("Error");
+            }
+                               
         }
         if (Input.GetKey(KeyCode.D))
         {
-            blocks[current].transform.position += new Vector3(0.01f, 0, 0);
+            if (Time.timeScale == 1f)
+            {
+               blocks[current].transform.position += new Vector3(0.01f, 0, 0); 
+            }
+            if (Time.timeScale == 0f)
+            {
+                Debug.Log("Error");
+            }
+            
         }
         if (Input.GetKey(KeyCode.A))
         {
-            blocks[current].transform.position -= new Vector3(0.01f, 0, 0);
+            if (Time.timeScale == 1f)
+            {
+                blocks[current].transform.position -= new Vector3(0.01f, 0, 0);
+            }
+            if (Time.timeScale == 0f)
+            {
+                Debug.Log("Error");
+            }
+            
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
 
+            if (Time.timeScale == 1f)
+            {
+                
+            }
+            if (Time.timeScale == 0f)
+            {
+                Debug.Log("Error");
+            }
             blocks[current].transform.Rotate(0, 0, 90);
         }
 
@@ -62,11 +106,11 @@ public class MoveNfall : MonoBehaviour
         //    int randomIndex = Random.Range(0, blocks.Length);
         //GameObject randomBlock = blocks[randomIndex];
 
-        //// РЎРѕР·РґР°РµРј Р±Р»РѕРє Рё РЅР°СЃС‚СЂР°РёРІР°РµРј С„РёР·РёРєСѓ
+        //// Создаем блок и настраиваем физику
         //GameObject newBlock = Instantiate(randomBlock, transform.position, Quaternion.identity);
         //newBlock.GetComponent<Rigidbody2D>().gravityScale = fallSpeed;
         //}
-        // Р’С‹Р±РёСЂР°РµРј СЃР»СѓС‡Р°Р№РЅС‹Р№ Р±Р»РѕРє РёР· РјР°СЃСЃРёРІР°
+        // Выбираем случайный блок из массива
         
         
     }
