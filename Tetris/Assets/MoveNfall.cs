@@ -13,14 +13,41 @@ public class MoveNfall : MonoBehaviour
     public Vector3 SpaPosition;
     public int maxBl = 10;
     int blockInt = 0;
-    private void Start()
+   
+    private void Awake()
+    {
+        Spawn();
+    }
+
+
+    public void Spawn()
     {
         current = (current + 1) % blocks.Length;
         blockInt++;
         blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
     }
-
-
+    //public void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (collision.CompareTag("Plate"))
+    //    {
+    //        Spawn();
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("Error");
+    //    }
+    //}
+    //public void OnTriggerEnter2D(Collider2D collider)
+    //{
+    //    if (collider.CompareTag("Plate"))
+    //    {
+    //        Spawn();
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("Error");
+    //    }
+    //}
     public void Update()
     {
 
@@ -40,9 +67,7 @@ public class MoveNfall : MonoBehaviour
         {
             if (Time.timeScale == 1f)
             {
-                current = (current + 1) % blocks.Length;
-                blockInt++;
-                blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
+                Spawn();
             }
             if (Time.timeScale == 0f)
             {
@@ -89,14 +114,5 @@ public class MoveNfall : MonoBehaviour
         }
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Plate"))
-        {
-            current = (current + 1) % blocks.Length;
-            blockInt++;
-            blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
-        }
-    }
-      
+
 }

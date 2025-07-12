@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 555061700}
   m_Layer: 0
   m_Name: Col
-  m_TagString: Untagged
+  m_TagString: Plate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -415,7 +415,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -533,7 +533,7 @@ Transform:
   m_GameObject: {fileID: 555061699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.71, y: -4.4, z: 0}
+  m_LocalPosition: {x: -0.71, y: -4.3, z: 0}
   m_LocalScale: {x: 19.02, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1100,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb0880605e6e824aac4248e829853f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!95 &1081766984
 Animator:
   serializedVersion: 7
@@ -1392,7 +1393,7 @@ GameObject:
   - component: {fileID: 1692243892}
   m_Layer: 0
   m_Name: Col (1)
-  m_TagString: Plate
+  m_TagString: End
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1934,10 +1935,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd45a49722ae56c4995e00dc9591d8f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  current: 0
-  score: {fileID: 1982938402}
-  Record: {fileID: 1706277304}
-  blocks:
+  scoreText: {fileID: 1982938402}
+  recordText: {fileID: 1706277304}
+  blockPrefabs:
   - {fileID: 2367511567667023223, guid: 3533b59a1c0163e439ca14334821f853, type: 3}
   - {fileID: 4152867381664972723, guid: 7ee1633984722464b81962670fac45ad, type: 3}
   - {fileID: 7802153159143090032, guid: 244e76ec0c8667c4281baf292d95da4b, type: 3}
@@ -1946,9 +1946,8 @@ MonoBehaviour:
   - {fileID: 3237175265098626663, guid: a4011f0494efebe4cbc7b6c4234859d5, type: 3}
   - {fileID: 3484343269421154827, guid: 63ccbdcec925144429e1399c22a3d90b, type: 3}
   - {fileID: 3725966124512098287, guid: 948273f392501ec4f95a21f982f9f9b5, type: 3}
-  fallSpeed: 3
-  SpaPosition: {x: 0, y: 1.48, z: 0}
-  maxBl: 40
+  spawnPosition: {x: 0, y: 1.6, z: 0}
+  maxBlocks: 10
 --- !u!1 &1982938400
 GameObject:
   m_ObjectHideFlags: 0

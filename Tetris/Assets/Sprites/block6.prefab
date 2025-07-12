@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1246209917756475693}
-  - component: {fileID: 7784239120475046308}
   - component: {fileID: -2667167729114092713}
   - component: {fileID: 998007748845943888}
   - component: {fileID: -5938123901724914784}
@@ -36,19 +35,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7784239120475046308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3237175265098626663}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 441583e7ac113d74cb0224812fc3b4f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GranitsaPrefab: {fileID: 0}
 --- !u!114 &-2667167729114092713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +47,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae5ca5a52c2c7674e9bd08f1e54ea70f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GranitsaPrefab: {fileID: 0}
 --- !u!212 &998007748845943888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -132,7 +117,7 @@ Rigidbody2D:
   m_Mass: 10.2
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0.2
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2

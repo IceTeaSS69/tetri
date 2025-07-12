@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Plate
   - Block
+  - End
   layers:
   - Default
   - TransparentFX
