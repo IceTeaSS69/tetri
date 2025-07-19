@@ -4,75 +4,61 @@ using UnityEngine.UI;
 
 public class MoveNfall : MonoBehaviour
 {
+    [Header("Components")]
+
+    [SerializeField] public Text score;
+    [SerializeField] public Text Record;
+    [SerializeField] public GameObject[] blocks;
+    [SerializeField] public int current = 0;
+    [Header("Settings")]
+    [SerializeField] public float fallSpeed = 3;
+    [SerializeField] public Vector3 SpaPosition;
+    [SerializeField] public int maxBl = 10;
+    [SerializeField] int blockInt = 0;
+    [SerializeField] public float speed = 1f;
+    public int SpawnRage = 1;
     
-    public int current = 0;
-    public Text score;
-    public Text Record;
-    public GameObject[] blocks;
-    public float fallSpeed = 3;
-    public Vector3 SpaPosition;
-    public int maxBl = 10;
-    int blockInt = 0;
-    public float speed = 1f;
    
-    private void Awake()
+    private void Start()
     {
-        StartSpawn();
+        Spawn();
+        
     }
 
-    void StartSpawn()
-    {
+    private void Spawn()
+    {   
+        blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
         current = (current + 1) % blocks.Length;
         blockInt++;
-        blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
-    }
-    public void Spawn()
-
-
-    {
-        if (DestroySc.IsBlockTouched == true)
-        {
-            current = (current + 1) % blocks.Length;
-            blockInt++;
-            blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
-        }
-        if(DestroySc.Endtouch == true)
-        {
-            Time.timeScale = 0f;
-        }
         
     }
     
     
-    public void Update()
+    
+    private void Update()
     {
-        Spawn();
-
+        if (DestroySc.IsBlockTouched == true)
+        {
+            Spawn();
+        }
+        else if (DestroySc.IsPlateTouched == true)
+        {
+            Spawn();
+        }
         score.text = $"{blockInt}";
-
+        
         if (Time.timeScale == 0f)
         {
             Destroy(score);
             Record.text = $"Your RECORD = {blockInt}";
         }
-        if (blockInt > maxBl)
+        else if (blockInt > maxBl)
         {
             Destroy(gameObject);
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (Time.timeScale == 1f)
-            {
-                Spawn();
-            }
-            if (Time.timeScale == 0f)
-            {
-                Debug.Log("Error");
-            }
-                               
-        }
-        float moveInput = Input.GetAxis("Horizontal");
 
+        }
+
+        float moveInput = Input.GetAxis("Horizontal");
         if (Time.timeScale == 1f)
         {
             blocks[current].transform.position += new Vector3(moveInput * speed, 0, 0);
@@ -88,13 +74,14 @@ public class MoveNfall : MonoBehaviour
             {
                 blocks[current].transform.Rotate(0, 0, 90);
             }
-            if (Time.timeScale == 0f)
+            else if (Time.timeScale == 0f)
             {
                 Debug.Log("Error");
             }
-            
+
         }
 
+        
     }
-
+    
 }
