@@ -13,44 +13,40 @@ public class MoveNfall : MonoBehaviour
     public Vector3 SpaPosition;
     public int maxBl = 10;
     int blockInt = 0;
+    public float speed = 1f;
    
     private void Awake()
     {
-        Spawn();
+        StartSpawn();
     }
 
-
-    public void Spawn()
+    void StartSpawn()
     {
         current = (current + 1) % blocks.Length;
         blockInt++;
         blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
     }
-    //public void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.CompareTag("Plate"))
-    //    {
-    //        Spawn();
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("Error");
-    //    }
-    //}
-    //public void OnTriggerEnter2D(Collider2D collider)
-    //{
-    //    if (collider.CompareTag("Plate"))
-    //    {
-    //        Spawn();
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("Error");
-    //    }
-    //}
+    public void Spawn()
+
+
+    {
+        if (DestroySc.IsBlockTouched == true)
+        {
+            current = (current + 1) % blocks.Length;
+            blockInt++;
+            blocks[current] = Instantiate(blocks[current], SpaPosition, Quaternion.identity);
+        }
+        if(DestroySc.Endtouch == true)
+        {
+            Time.timeScale = 0f;
+        }
+        
+    }
+    
+    
     public void Update()
     {
-
+        Spawn();
 
         score.text = $"{blockInt}";
 
@@ -75,42 +71,28 @@ public class MoveNfall : MonoBehaviour
             }
                                
         }
-        if (Input.GetKey(KeyCode.D))
+        float moveInput = Input.GetAxis("Horizontal");
+
+        if (Time.timeScale == 1f)
         {
-            if (Time.timeScale == 1f)
-            {
-               blocks[current].transform.position += new Vector3(0.01f, 0, 0); 
-            }
-            if (Time.timeScale == 0f)
-            {
-                Debug.Log("Error");
-            }
-            
+            blocks[current].transform.position += new Vector3(moveInput * speed, 0, 0);
         }
-        if (Input.GetKey(KeyCode.A))
+        else if (Time.timeScale == 0f)
         {
-            if (Time.timeScale == 1f)
-            {
-                blocks[current].transform.position -= new Vector3(0.01f, 0, 0);
-            }
-            if (Time.timeScale == 0f)
-            {
-                Debug.Log("Error");
-            }
-            
+            Debug.Log("Error");
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
 
             if (Time.timeScale == 1f)
             {
-                
+                blocks[current].transform.Rotate(0, 0, 90);
             }
             if (Time.timeScale == 0f)
             {
                 Debug.Log("Error");
             }
-            blocks[current].transform.Rotate(0, 0, 90);
+            
         }
 
     }
