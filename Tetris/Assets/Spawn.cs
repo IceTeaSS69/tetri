@@ -2,9 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Spawn : MonoBehaviour
 {
-    public GameObject blockPrefab;
     private Button button;
-    private static bool spawned = false;
 
     void Start()
     {
@@ -13,23 +11,11 @@ public class Spawn : MonoBehaviour
 
     void Update()
     {
-        bool isPaused = (Time.timeScale == 0);
-        button.interactable = isPaused;
-        button.image.enabled = isPaused;
-
+        button.interactable = (Time.timeScale == 0);
+        button.image.enabled = (Time.timeScale == 0);
         foreach (Transform child in transform)
         {
-            child.gameObject.SetActive(isPaused);
-        }
-
-        if (isPaused && !spawned)
-        {
-            Instantiate(blockPrefab, transform.position, Quaternion.identity);
-            spawned = true;
-        }
-        if (!isPaused)
-        {
-            spawned = false;
+            child.gameObject.SetActive(Time.timeScale == 0);
         }
     }
 }
